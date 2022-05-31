@@ -221,17 +221,17 @@ class EventRequest implements ArrayAccess {
    * @return EventResponse
    */
   public function execute() {
-    $http_client = null;
+    // $http_client = null;
 
-    if ($this->http_client != null) {
-      $http_client = $this->http_client;
-    } else {
-      $http_client = HttpServiceClientConfig::getInstance()->getClient();
-    }
+    // if ($this->http_client != null) {
+    //   $http_client = $this->http_client;
+    // } else {
+    //   $http_client = HttpServiceClientConfig::getInstance()->getClient();
+    // }
 
-    if ($http_client != null) {
-      return $this->httpClientExecute($http_client);
-    }
+    // if ($http_client != null) {
+    //   return $this->httpClientExecute($http_client);
+    // }
 
     return $this->defaultExecute();
   }
